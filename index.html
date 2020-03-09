@@ -1,0 +1,54 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>File Uploader</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="upload-form">
+
+            <div class="info">
+                <h2>Select the file and click "Upload" button. </h2>
+            </div>
+
+            <form id="upload-form" class="form" method="post">
+                <div>
+                    <div class="form-label"><label for="image-file">Select JPG file from your computer</label></div>
+
+                    <div><input type="file" id="image-file" accept=".jpg,.jpeg,.png, .pdf, .docx, .xlsx" hidden="hidden" onchange="selectFile()" multiple></div>
+                </div>
+
+                <div class="form-button"><button type="button" id="add">Choose a file</button></div>
+                <span id="noFile" class="file-choose">No file(s) chosen.</span>
+
+                <div class="form-button"><button type="button" id="upload">Upload</button></div>
+
+                <div id="main-files" class="main-files">
+                    <ul id="info-files">
+
+                    </ul>
+
+                </div>
+
+                <div id="error">We can accept only JPG files.</div>
+                <div id="warning">Your file is too big. Please select file up to 1MB.</div>
+
+            </form>
+        </div>
+    </div>
+
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
